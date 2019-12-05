@@ -18,12 +18,12 @@ pipeline{
 				}
 			}
 		}
-		stage("Test Method") {
-			steps{
-				script{
-					log_files = model_test.find_files('**/*.log')
-				}
-			}
-		}
+		//stage("Test Method") {
+		//	steps{
+		//		script{
+		//			log_files = model_test.find_files('**/*.log')
+		//		}
+		//	}
+		//}
 	}
 }
