@@ -1,5 +1,4 @@
-import hudson.model.*;
- 
+import jenkins.model.*
  
 def find_files(filetype) {
 	
