@@ -20,6 +20,6 @@ def read_json_file2(json_string) {
 	propMap.each {
 		println ( it.key + " = " + it.value )
 	}
- 
-return this;
 }
+
+return this;
