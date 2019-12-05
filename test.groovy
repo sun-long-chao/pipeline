@@ -14,6 +14,7 @@ pipeline{
 					println "欢迎来到sunlongchao的Pipeline教程。"
 					model_test = load env.WORKSPACE + "/test.groovy"
 					println env.WORKSPACE ;
+					log_files = model_test.find_files('**/*.log')
 				}
 			}
 		}
