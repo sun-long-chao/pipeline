@@ -12,7 +12,7 @@ pipeline{
 			steps{
 				script{
 					println "欢迎来到sunlongchao的Pipeline教程。"
-					model_test = load env.WORKSPACE + "/test.groovy"
+					model_test = load env.WORKSPACE + "/module/pipelind-demo-module.groovy"
 					println env.WORKSPACE ;
 				}
 			}
@@ -20,7 +20,7 @@ pipeline{
 	    stage("Test Method") {
 			steps{
 				script{
-					log_files = model_test.find_files('*.log')
+					log_files = model_test.find_files('**/*.log')
 				}
 			}
 		}
