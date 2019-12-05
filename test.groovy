@@ -12,7 +12,7 @@ pipeline{
 			steps{
 				script{
 					println "欢迎来到sunlongchao的Pipeline教程。"
-					model_test = load env.WORKSPACE + "/module/pipelind-demo-module.groovy"
+					model_test = load env.WORKSPACE + "/module/pipeline-demo-module.groovy"
 					println env.WORKSPACE ;
 				}
 			}
