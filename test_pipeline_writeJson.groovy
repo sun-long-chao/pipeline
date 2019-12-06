@@ -20,12 +20,9 @@ pipeline{
 					json_file = env.WORKSPACE + "/testdata/test_json.json"
 					tojson_file = env.WORKSPACE + "/testdata/new_json.json"
 					model_test.write_json_to_file(json_file,tojson_file)
-					println "===(£þ¨Œ£þ) (£þ¨Œ£þ)  (£þ¨Œ£þ)   ==111"
-					json_string = '[NAME:"Anthony",AGE:"18",CITY:"Beijing",GENDER:"male"]';
+					json_string = '{"NAME":"Anthony","AGE":"18","CITY":"Beijing","GENDER":"male"}';
 					tojson_file = env.WORKSPACE + "/testdata/new_json1.json"
-					println "===(£þ¨Œ£þ) (£þ¨Œ£þ)  (£þ¨Œ£þ)   ==222"
 					model_test.write_json_to_file(json_string,tojson_file)
-					println "===(£þ¨Œ£þ) (£þ¨Œ£þ)  (£þ¨Œ£þ)   ==555"
 				}
 			}
 		}
