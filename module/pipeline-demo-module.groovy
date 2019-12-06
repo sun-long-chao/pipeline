@@ -38,6 +38,7 @@ def write_json_to_file(input_json, tofile_path) {
         def map = jsonSlurper.parseText(input_json)
  		println "===(£þ¨Œ£þ) (£þ¨Œ£þ)  (£þ¨Œ£þ)   ==444"
 		input1 = map
+		println map 
 	}
 	writeJSON file: tofile_path, json: input1
 }
