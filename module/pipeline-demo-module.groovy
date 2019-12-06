@@ -1,7 +1,7 @@
 import hudson.model.*;
 import groovy.json.*;
-import groovy.json.JsonOutput
-import groovy.json.JsonSlurper
+import groovy.json.JsonOutput;
+import groovy.json.JsonSlurper;
 
 //查到文件
 def find_files(filetype) {
