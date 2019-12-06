@@ -35,7 +35,9 @@ def write_json_to_file(input_json, tofile_path) {
         //def jsonSlurper = new JsonSlurper()
         //获取到的是Map对象
         //def map = jsonSlurper.parseText(input_json)
-		input1 = input_json
+        def jsonOutput = new JsonOutput()
+        def json = JsonOutput.toJson(input_json)
+		input1 = json
 		println input1
 	}
 	writeJSON file: tofile_path, json: input1
