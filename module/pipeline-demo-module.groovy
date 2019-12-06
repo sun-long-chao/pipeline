@@ -33,9 +33,10 @@ def write_json_to_file(input_json, tofile_path) {
 	}else {
 	
         def jsonSlurper = new JsonSlurper()
+        println "===(￣▽￣) (￣▽￣)  (￣▽￣)   ==333"
         //获取到的是Map对象
         def map = jsonSlurper.parseText(input_json)
- 		  
+ 		println "===(￣▽￣) (￣▽￣)  (￣▽￣)   ==444"
 		input1 = map
 	}
 	writeJSON file: tofile_path, json: input1

@@ -25,7 +25,7 @@ pipeline{
 					tojson_file = env.WORKSPACE + "/testdata/new_json1.json"
 					println "===(£þ¨Œ£þ) (£þ¨Œ£þ)  (£þ¨Œ£þ)   ==222"
 					model_test.write_json_to_file(json_string,tojson_file)
-					println "===(£þ¨Œ£þ) (£þ¨Œ£þ)  (£þ¨Œ£þ)   ==333"
+					println "===(£þ¨Œ£þ) (£þ¨Œ£þ)  (£þ¨Œ£þ)   ==555"
 				}
 			}
 		}
