@@ -1,5 +1,7 @@
 import hudson.model.*;
 import groovy.json.*;
+import groovy.json.JsonOutput
+import groovy.json.JsonSlurper
 
 //查到文件
 def find_files(filetype) {
@@ -30,11 +32,11 @@ def write_json_to_file(input_json, tofile_path) {
 		input1 = readJSON file : input_json
 	}else {
 	
-		def slurper = new JsonSlurper()
-		def json_object = slurper.parseText(input_json)
-		def jsonOutput = new JsonOutput()
-        def new_json_object = jsonOutput.toJson(json_object)
-		input1 = new_json_object
+        def jsonSlurper = new JsonSlurper()
+        //获取到的是Map对象
+        def map = jsonSlurper.parseText(input_json)
+ 		  
+		input1 = map
 	}
 	writeJSON file: tofile_path, json: input1
 }
