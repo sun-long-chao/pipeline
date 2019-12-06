@@ -25,15 +25,15 @@ def read_json_file2(json_string) {
 
 //将json数据写入文件
 def write_json_to_file(input_json, tofile_path) {
-	def input = ''
+	def input1 = ''
 	if(input_json.toString().endsWith(".json")) {
-		input = readJSON file : input_json
+		input1 = readJSON file : input_json
 	}else {
 		def jsonOutput = new JsonOutput()
         def new_json_object = jsonOutput.toJson(input_json)
-		input = new_json_object
+		input1 = new_json_object
 	}
-	writeJSON file: tofile_path, json: input
+	writeJSON file: tofile_path, json: input1
 }
 
 return this;
