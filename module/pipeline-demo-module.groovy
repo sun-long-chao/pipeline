@@ -32,12 +32,20 @@ def write_json_to_file(input_json, tofile_path) {
 		input1 = readJSON file : input_json
 	}else {
         //def jsonSlurper = new JsonSlurper()
-        //获取到的是Map对象
-        //def map = jsonSlurper.parseText(input_json)
+        //获取到的是obj对象
+        //def object = jsonSlurper.parseText(input_json)
         input1 = readJSON text : input_json
 		println input1
 	}
 	writeJSON file: tofile_path, json: input1
+}
+
+//解析读取properties文件方法
+def read_properties(properties_file) {
+	 def props = readProperties interpolate: true, file: properties_file
+	 props.each {
+		println ( it.key + " = " + it.value )
+	 }
 }
 
 return this;
