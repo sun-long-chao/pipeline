@@ -1,7 +1,7 @@
 import hudson.model.*;
 
-println env.JOB_NAME;
-println env.BUILD_NUMBER;
+println "¡¾Jenkins JOB_NAME: ¡¿"+env.JOB_NAME;
+println "¡¾Jenkins ¹¹½¨Â·¾¶¡¿"+env.BUILD_NUMBER;
 
 pipeline{
 	agent any 
