@@ -1,7 +1,7 @@
 import hudson.model.*;
 
 println "【Jenkins JOB_NAME: 】"+env.JOB_NAME;
-println "【Jenkins 构建路径】"+env.BUILD_NUMBER;
+println "【Jenkins 构建次数】"+env.BUILD_NUMBER;
 
 pipeline{
 	agent any 
@@ -16,7 +16,7 @@ pipeline{
 		stage("read properties"){
 		    steps{
 		       script{
-		       		properties_file = env.WORKSPACE+ "/pipeline/tesetDate/test.properties";
+		       		properties_file = env.WORKSPACE+ "/pipeline/testDate/test.properties";
 		       		model_test.read_properties(properties_file);
 		       		println("========================");
 		       }
