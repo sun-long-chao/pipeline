@@ -42,7 +42,7 @@ def write_json_to_file(input_json, tofile_path) {
 
 //解析读取properties文件方法
 def read_properties(properties_file) {
-	 def props = readProperties interpolate: true, file: properties_file
+	 def props = readProperties file: properties_file
 	 props.each {
 		println ( it.key + " = " + it.value )
 	 }
